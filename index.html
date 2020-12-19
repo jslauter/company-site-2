@@ -41,7 +41,7 @@
                 <!-- <div class="text-1">Hello, my name is</div> -->
                 <div class="text-2">NRZ Solutions</div>
                 <div class="text-3">Easy...<span class="typing"></span></div>
-                <a href="#">The Easy Button</a>
+                <a href="mailto:nrzsolutionsusa@gmail.com?subject=Inquiry">The Easy Button</a>
             </div>
           </div>
       </div>
@@ -57,8 +57,8 @@
                 </div>
                 <div class="column right">
                     <div class="text">Creating <span class="typing-2"></span></div>
-                    <p>Design must have purpose. Here at NRZ Solutions that is the core of our philosophy. By merging imagination and technology we help brands grow.</p>
-                    <a href="#">Download CV</a>
+                    <p>Design must have purpose. Here at NRZ Solutions that is the core of our philosophy. By merging imagination and technology we help brands grow by creating a website your customers will remember.</p>
+                    <!-- <a href="#">Download CV</a> -->
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in Touch</div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                    <p>Got a Project or Partnership in Mind? Let us know!</p>
                     <div class="icons">
                         <div class="row">
                             <i class="fas fa-user"></i>
@@ -129,24 +129,25 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form class="contact-form" action="#" method="POST">
+                    <form class="contact-form" action="https://formspree.io/f/xbjqggyo" id="my-form" method="POST">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" class="fullname" placeholder="Name">
+                                <input type="text" class="fullname" placeholder="Name" name="first name">
                             </div>
                             <div class="field email">
-                                <input type="text" class="email-input" placeholder="Email">
+                                <input type="text" class="email-input" placeholder="Email" name="email">
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" class="subject" placeholder="Subject">
+                            <input type="text" class="subject" placeholder="Subject" name="subject">
                         </div>
                         <div class="field textarea">
-                            <textarea class="message" cols="30" rows="10" placeholder="Message.."></textarea>
+                            <textarea class="message" cols="30" rows="10" placeholder="Message.." name="message"></textarea>
                         </div>
                         <div class="button-area">
-                            <button class="send-msg" type="submit" name="send">Send message</button>
+                            <button class="send-msg" id="my-form-button" type="submit" name="send">Send message</button>
                         </div>
+                        <p id="my-form-status"></p>
                     </form>
                 </div>
             </div>

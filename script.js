@@ -49,24 +49,55 @@ $(document).ready(function(){
     });
 
     // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
-        }
-    });
+    // $('.carousel').owlCarousel({
+    //     margin: 20,
+    //     loop: true,
+    //     autoplayTimeOut: 2000,
+    //     autoplayHoverPause: true,
+    //     responsive: {
+    //         0:{
+    //             items: 1,
+    //             nav: false
+    //         },
+    //         600:{
+    //             items: 2,
+    //             nav: false
+    //         },
+    //         1000:{
+    //             items: 3,
+    //             nav: false
+    //         }
+    //     }
+    // });
 });
+
+
+// form spree
+
+
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+
+    window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
